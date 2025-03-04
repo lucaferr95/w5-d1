@@ -25,35 +25,62 @@
       rgba(0, 160, 198, 1) 0%,
       rgba(3, 109, 134, 1) 68%
     );
-    text-align: center;
     text-transform: uppercase;
     font-weight: bold;
     color: white;
     box-shadow: 0 3px 3px #444;
     margin-bottom: 1.5em;
     padding: 2em 1.5em;
+    display: flex;
+    justify-content: space-between; /* Distribuisce gli elementi lungo l'asse orizzontale */
+    align-items: center; /* Allinea verticalmente gli elementi */
   }
-  header div img {
-    margin-bottom: 20px;
-  }
-  header nav ul {
-    margin: 0;
-  }
-  header nav li {
-    list-style: none;
+
+  header p {
     display: inline-block;
+    margin: 40px;
   }
+
+  header div img {
+    display: inline-block;
+    width: 25%; /* Imposta larghezza immagine */
+    margin-bottom: 0;
+    vertical-align: middle; /* Allinea verticalmente con gli altri elementi */
+  }
+
+  header nav {
+    display: inline-block;
+    width: auto; /* La larghezza può essere automatica per adattarsi ai contenuti */
+    text-align: right; /* Allinea i contenuti di nav a destra */
+  }
+
+  header nav ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  header nav li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 20px; /* Spazio tra i link di navigazione */
+  }
+
   header nav li a {
+    display: inline-block;
     color: white;
     text-decoration: none;
+    padding: 10px;
   }
+
   header nav li a:hover {
     color: red;
   }
-  header nav li a::before {
-    content: "\22c6\0020";
-  }
 
+  header nav li a::before {
+    content: "\22c6\0020"; /* Aggiunge il simbolo davanti ai link */
+  }
   /* MAIN */
   main {
     background-color: #fff;
@@ -153,7 +180,7 @@
   /* FORM */
   iframe {
     width: 45%;
-    height: 400px;
+    height: 350px;
     display: inline-block;
     vertical-align: top;
   }
@@ -163,6 +190,7 @@
     display: inline-block;
     vertical-align: top;
     text-align: left;
+    border-radius: 5%;
   }
   input {
     width: 75%;
